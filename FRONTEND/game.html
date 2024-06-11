@@ -1,13 +1,5 @@
-<div class="container_cards" ng-controller="GameCtrl">
-  <img src="./assets/card.png" alt="">
-  <img src="./assets/card.png" alt="">
-  <img src="./assets/card.png" alt="">
-  <img src="./assets/card.png" alt="">
-  <img src="./assets/card.png" alt="">
-  <img src="./assets/card.png" alt="">
-  <img src="./assets/card.png" alt="">
-  <img src="./assets/card.png" alt="">
-  <img src="./assets/card.png" alt="">
-  <img src="./assets/card.png" alt="">
-
-</div>
+<section class="container_cards">
+  <div ng-controller="GameCtrl">
+    <img class="flip-vertical-fwd " ng-repeat="image in images" ng-src="{{ image.webformatURL }}" alt="{{ image.tags }}">
+  </div>
+</section>

@@ -19,34 +19,81 @@ html {
 }
 
 .container_home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column !important;
-    width: 100%;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column !important;
+  width: 100%;
+  height: 100vh;
 }
 
 .container_home h1 {
-    font-family: "pixelmania";
-    color: #8e4d7b;;
+  font-family: "pixelmania";
+  color: #8e4d7b;
 }
 
 .container_home button {
-    font-family: "GRAPHIK";
-    font-size: 20px;
-    color: #a943ff;
-    background-color: #f86eff;
-    border: none;
-    border-radius: 6px;
-    width: 110px;
-    height: 50px;
-    cursor: pointer;
+  font-family: "GRAPHIK";
+  font-size: 20px;
+  color: #a943ff;
+  background-color: #f86eff;
+  border: none;
+  border-radius: 6px;
+  width: 110px;
+  height: 50px;
+  cursor: pointer;
 }
 
 .container_cards {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 columnas de igual ancho */
-    grid-template-rows: auto auto; /* Dos filas automáticas */
-    gap: 10px; /* Espacio entre columnas */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  margin-top: 2rem;
+}
+
+.container_cards div {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columnas de igual ancho */
+  grid-template-rows: auto auto; /* Dos filas automáticas */
+  gap: 1.5rem; /* Espacio entre columnas */
+}
+
+.flip-vertical-fwd {
+  -webkit-animation: flip-vertical-fwd 0.4s
+    cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  animation: flip-vertical-fwd 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+@-webkit-keyframes flip-vertical-fwd {
+  0% {
+    -webkit-transform: translateZ(0) rotateY(0);
+    transform: translateZ(0) rotateY(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px) rotateY(180deg);
+    transform: translateZ(160px) rotateY(180deg);
+  }
+}
+@keyframes flip-vertical-fwd {
+  0% {
+    -webkit-transform: translateZ(0) rotateY(0);
+    transform: translateZ(0) rotateY(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px) rotateY(180deg);
+    transform: translateZ(160px) rotateY(180deg);
+  }
+}
+
+.flip-vertical-fwd {
+  width: 15rem;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s;
+}
+
+.flip-vertical-fwd:hover {
+  transform: scale(1.1);
 }
