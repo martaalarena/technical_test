@@ -43,3 +43,10 @@ html {
     height: 50px;
     cursor: pointer;
 }
+
+.container_cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas de igual ancho */
+    grid-template-rows: auto auto; /* Dos filas automáticas */
+    gap: 10px; /* Espacio entre columnas */
+}
