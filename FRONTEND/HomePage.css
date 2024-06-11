@@ -1,0 +1,45 @@
+html {
+  margin: 0;
+  background-image: url(../FRONTEND/assets/homeBackground.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@font-face {
+  font-family: "pixelmania";
+  src: url("./assets/PIXELMANIA.TTF") format("truetype");
+}
+
+@font-face {
+  font-family: "GRAPHIK";
+  src: url("./assets/GRAPHIK-BOLD-TRIAL.OTF");
+}
+
+.container_home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column !important;
+    width: 100%;
+    height: 100vh;
+}
+
+.container_home h1 {
+    font-family: "pixelmania";
+    color: #8e4d7b;;
+}
+
+.container_home button {
+    font-family: "GRAPHIK";
+    font-size: 20px;
+    color: #a943ff;
+    background-color: #f86eff;
+    border: none;
+    border-radius: 6px;
+    width: 110px;
+    height: 50px;
+    cursor: pointer;
+}
