@@ -59,41 +59,11 @@ html {
   gap: 1.5rem; /* Espacio entre columnas */
 }
 
-.flip-vertical-fwd {
-  -webkit-animation: flip-vertical-fwd 0.4s
-    cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-  animation: flip-vertical-fwd 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-}
-
-@-webkit-keyframes flip-vertical-fwd {
-  0% {
-    -webkit-transform: translateZ(0) rotateY(0);
-    transform: translateZ(0) rotateY(0);
-  }
-  100% {
-    -webkit-transform: translateZ(160px) rotateY(180deg);
-    transform: translateZ(160px) rotateY(180deg);
-  }
-}
-@keyframes flip-vertical-fwd {
-  0% {
-    -webkit-transform: translateZ(0) rotateY(0);
-    transform: translateZ(0) rotateY(0);
-  }
-  100% {
-    -webkit-transform: translateZ(160px) rotateY(180deg);
-    transform: translateZ(160px) rotateY(180deg);
-  }
-}
-
-.flip-vertical-fwd {
+.container_cards img{
   width: 15rem;
   height: 20rem;
   object-fit: cover;
   border-radius: 10px;
-  transition: transform 0.4s;
 }
 
-.flip-vertical-fwd:hover {
-  transform: scale(1.1);
-}
+
