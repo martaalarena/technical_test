@@ -1,4 +1,3 @@
-
 package com.technicaltest.backend.controllers;
 
 import java.util.List;
@@ -14,7 +13,7 @@ import com.technicaltest.backend.service.CartaService;
 
 @RestController
 @RequestMapping("/api/cartas")
-@CrossOrigin("http://localhost:5500")
+@CrossOrigin(origins = "http://localhost:5500")
 public class CartaRestController {
 
     @Autowired

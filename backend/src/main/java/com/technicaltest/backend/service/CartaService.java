@@ -1,7 +1,6 @@
 package com.technicaltest.backend.service;
 
 import com.technicaltest.backend.model.Carta;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -12,7 +11,7 @@ import java.util.List;
 public class CartaService {
 
  
-    @Autowired
+    // @Autowired
     // private PixabayService pixabayService;
 
     public List<Carta> generarCartasJuego() {
