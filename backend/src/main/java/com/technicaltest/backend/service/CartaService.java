@@ -10,32 +10,40 @@ import java.util.List;
 @Service
 public class CartaService {
 
- 
-    // @Autowired
-    // private PixabayService pixabayService;
-
     public List<Carta> generarCartasJuego() {
         List<Carta> cartas = new ArrayList<>();
 
-        // // Obtener imágenes de Pixabay
-        // List<ImagenPixabay> imagenesPixabay = pixabayService.obtenerImagenesAleatorias(5); // 5 pares, 10 cartas en total
+        // Crear 8 pares de cartas con URLs de imágenes (puedes ajustar el número de pares según tu necesidad)
+        String[] imagenUrls = {
+            "http://imgfz.com/i/cvu8aN6.png",
+            "http://imgfz.com/i/FJeBfPZ.png",
+            "http://imgfz.com/i/TA3mtYw.png",
+            "http://imgfz.com/i/8d6qyl5.png",
+            "http://imgfz.com/i/6JYZ7A2.png"
+        };
 
-        // // Crear cartas a partir de las imágenes
-        // for (ImagenPixabay imagen : imagenesPixabay) {
-        //     Carta carta = new Carta();
-        //     carta.setImagenUrl(imagen.getWebformatURL());
-        //     cartas.add(carta);
-        // }
+        for (String url : imagenUrls) {
+            Carta carta1 = new Carta();
+            carta1.setImagenUrl(url);
+            carta1.setDescubierta(false);
+            carta1.setEmparejada(false);
 
-        // // Duplicar cartas para crear parejas
-        cartas.addAll(cartas);
+            Carta carta2 = new Carta();
+            carta2.setImagenUrl(url);
+            carta2.setDescubierta(false);
+            carta2.setEmparejada(false);
 
-        // // Barajar las cartas
+            cartas.add(carta1);
+            cartas.add(carta2);
+        }
+
+        // Barajar las cartas
         Collections.shuffle(cartas);
 
         return cartas;
     }
 }
+
 
 
 // package com.technicaltest.backend.service;

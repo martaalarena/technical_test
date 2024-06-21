@@ -23,9 +23,8 @@ public class CartaRestController {
     public List<Carta> generarJuego() {
         return cartaService.generarCartasJuego();
     }
-
-    // Mappings para otras operaciones (guardar, actualizar, eliminar)
 }
+
 
 // package com.technicaltest.backend.controllers;
 
