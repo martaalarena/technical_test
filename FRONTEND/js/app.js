@@ -39,31 +39,29 @@ app.controller("GameCtrl", [
     vm.cartasSeleccionadas = [];
 
     // URL de la API de Spring Boot
-    var apiUrl = "http://localhost:8080/api/cartas/juego"; // Asegúrese de incluir "/juego"
+    var apiUrl = "http://localhost:8080/api/cartas/juego"; 
 
 
     // Realiza una solicitud GET a la API de Spring Boot
     $http
       .get(apiUrl)
       .then(function (response) {
-        // Éxito: asigna las cartas al modelo
         vm.cartas = response.data.map(function (carta) {
             return {
                 id: carta.id,
                 imagenUrl: carta.imagenUrl,
-                oculta: false,
+                descubierta: false,
             };
         });
 
         // Mostrar las cartas por 2 segundos
         $timeout(function () {
             vm.cartas.forEach(function (carta) {
-                carta.oculta = true;
+                carta.descubierta = true;
             });
         }, 2000);
     })
     .catch(function (error) {
-        // Error: maneja el error
         console.error(
           "Error al obtener datos de la API de Spring Boot:",
           error
@@ -71,8 +69,8 @@ app.controller("GameCtrl", [
     });
 
     vm.seleccionarCarta = function (carta) {
-      if (carta.oculta && vm.cartasSeleccionadas.length < 2) {
-        carta.oculta = false;
+      if (carta.descubierta && vm.cartasSeleccionadas.length < 2) {
+        carta.descubierta = false;
         vm.cartasSeleccionadas.push(carta);
 
         if (vm.cartasSeleccionadas.length === 2) {
@@ -81,7 +79,7 @@ app.controller("GameCtrl", [
               // Las cartas emparejadas permanecen visibles
             } else {
               vm.cartasSeleccionadas.forEach(function (c) {
-                c.oculta = true;
+                c.descubierta = true;
               });
             }
             vm.cartasSeleccionadas = [];
