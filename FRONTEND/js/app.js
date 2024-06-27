@@ -39,7 +39,7 @@ app.controller("GameCtrl", [
     vm.cartasSeleccionadas = [];
 
     // URL de la API de Spring Boot
-    var apiUrl = "http://localhost:8080/api/cartas/juego"; 
+    var apiUrl = "http://localhost:9000/api/cartas/juego"; 
 
 
     // Realiza una solicitud GET a la API de Spring Boot

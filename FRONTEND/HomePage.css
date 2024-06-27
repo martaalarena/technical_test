@@ -50,13 +50,14 @@ html {
   align-items: center;
   height: 90vh;
   margin-top: 2rem;
+margin-left: 2rem;
 }
 
 .container_cards div {
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* 5 columnas de igual ancho */
   grid-template-rows: auto auto; /* Dos filas automáticas */
-  gap: 1.5rem; /* Espacio entre columnas */
+  gap: 1rem; /* Espacio entre columnas */
 }
 
 .container_cards img{
